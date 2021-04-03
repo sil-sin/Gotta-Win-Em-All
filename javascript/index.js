@@ -8,14 +8,14 @@ let bg = new Image()
 bg.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/skybackground.png?raw=true"
 
 let fg = new Image()
-fg.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/foreground.png?raw=true"
+fg.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/alternativeFR.png?raw=true"
 
 
 let pokemon = new Image()
 pokemon.src = 'https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/1.svg?raw=true'
 function draw(){
     ctx.drawImage(bg , 0, 0 ,700, 400)
-    ctx.drawImage(fg, 0,300)
+    ctx.drawImage(fg, 0,300,400,300)
     ctx.drawImage(pokemon,30, 244,60,60 )
 }
 
