@@ -34,6 +34,7 @@ padding-top: 30px;
 
 canvas {
   margin-bottom: 50px;
+  background-color: rgb(106, 146, 242);
 }
 
  #startScr, #gameOver ,#winScr{
