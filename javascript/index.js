@@ -14,7 +14,7 @@ fg.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/image
 let pokemon = new Image()
 pokemon.src = 'https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/1.svg?raw=true'
 function draw(){
-    ctx.drawImage(bg , 0, 0 )
+    ctx.drawImage(bg , 0, 0 ,700, 400)
     ctx.drawImage(fg, 0,300)
     ctx.drawImage(pokemon,30, 244,60,60 )
 }
