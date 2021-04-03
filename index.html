@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <img src="./images/gameTitle.png" alt="title-img" id="title">
+    </header>
+<div class="body">
+    <div id="info" >
+        <h2>Game Info</h2>
+        <p>Gotta Win Em All! is a Pokemon-themed game, infinite scroll/ run type, where the player has to make the character jump over the obstacles that will be coming at it. If the character collides with the obstacle then is Game Over.
+            The goal is to make the highest score possible.</p>
+    </div>
+    <div id="gamescreen" >
+        <canvas width="700" height="400" > </canvas>
+     <div id="startScr">
+        <img src="./images/chooseStarter.png" alt="choose your pokemon">
+        <div id="pokeballs">
+            <img src="./images/pokeball.png" alt="charmander">
+            <img src="./images/pokeball.png" alt="bulbasaur">
+            <img src="./images/pokeball.png" alt="squirtle">
+        </div>
+        <button id="startBtn">
+            <img src="./images/Start.png" alt="startbtn">
+        </button>
+    </div>
+    <div id="gameOver">
+        <img src="./images/gameover.png" alt="game over">
+        <img src="./images/faint.gif" alt="faint">        
+        <button id="restartBtn"><img src="./images/restart.png" alt="restartbtn"></button>
+    <!-- </div>
+    <div id="winScr">
+        <img src="./images/wintext.png" alt="you won">
+        <img src="./images/win.gif" alt="win" id="win">
+        <button id="restartBtn"><img src="./images/restart.png" alt="restartbtn"></button>
+    </div> -->
+
+    </div>
+    
+    <div id="highscore"  >
+        <h2>High Scores</h2>
+    </div> 
+</div>
+<footer>
+    <img src="" alt="">
+</footer>
+<script src="./javascript/index.js"></script>
+<script src="./javascript/game.js"></script>
+</body>
+</html>
