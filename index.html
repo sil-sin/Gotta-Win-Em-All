@@ -19,12 +19,13 @@
     </div>
     <div id="gamescreen" >
         <canvas width="700" height="400" > </canvas>
+        </div>
      <div id="startScr">
         <img src="./images/chooseStarter.png" alt="choose your pokemon">
         <div id="pokeballs">
-            <img src="./images/pokeball.png" alt="charmander">
-            <img src="./images/pokeball.png" alt="bulbasaur">
-            <img src="./images/pokeball.png" alt="squirtle">
+            <img src="./images/pokeball.png" alt="charmander" id="charmander">
+            <img src="./images/pokeball.png" alt="bulbasaur" id="bulbasaur"> 
+            <img src="./images/pokeball.png" alt="squirtle" id="squirtle">
         </div>
         <button id="startBtn">
             <img src="./images/Start.png" alt="startbtn">
@@ -38,18 +39,20 @@
     <!-- <div id="winScr">
         <img src="./images/wintext.png" alt="you won">
         <img src="./images/win.gif" alt="win" id="win">
-        <button id="restartBtn"><img src="./images/restart.png" alt="restartbtn"></button>
+        <button id="restartBtn1"><img src="./images/restart.png" alt="restartbtn"></button>
     </div> -->
 
-    </div>
+    
     
     <div id="highscore"  >
-        <h2>High Scores</h2>
+        <h2 id="current">Score :<span>0</span> </h2>
+        <h2 id="highScore">High Scores</h2>
+        <div id="input-container">
+            <input type="text" id="name" maxlength="24">
+            <button id="submit" type="submit">Submit Score</button>
+        </div>
     </div> 
 </div>
-<footer>
-    <img src="" alt="">
-</footer>
 <script src="./javascript/index.js"></script>
 <script src="./javascript/game.js"></script>
 </body>
