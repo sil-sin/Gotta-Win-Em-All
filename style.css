@@ -30,6 +30,10 @@ header img {
   height: 400px;
   margin: 50px;
 }
+#info h2,
+p {
+  margin: 0;
+}
 
 canvas {
   margin-bottom: 50px;
@@ -61,19 +65,42 @@ canvas {
   height: 160px;
 }
 #keys {
-  height: 100px;
+  height: 70px;
 }
 #info p {
-  font-size: smaller;
+  font-size: 0.9em;
 }
-#confirm{
+#confirm {
   color: rgb(0, 0, 0);
   font-size: x-large;
-  text-shadow: rgb(255, 238, 0)  -2px -1px ;
+  text-shadow: rgb(255, 238, 0) -2px -1px;
 }
-#confirm span{
+#confirm span {
   color: rgb(0, 3, 1);
-  text-shadow: rgb(2, 75, 184) -1px -1px ;
+  text-shadow: rgb(2, 75, 184) -1px -1px;
   font-size: xx-large;
-  
+}
+#music {
+  position: relative;
+  top: 0px;
+  left: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: bolder;
+  background-color: white;
+  border-radius: 5px;
+  padding: 5px;
+}
+#music span {
+  color: green;
+}
+
+#badges {
+  display: flex;
+  width: 240px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#badges img {
+  width: 30px;
+  height: 30px;
 }

@@ -15,16 +15,21 @@
     </header>
     <div class="body">
         <div id="info">
+            <p id="music"> Music : <span>On</span> </p>
             <h2>Game Info</h2>
-            <p>Welcome, Player!
-                Try to make as many points as possible, evading the obstacles.
-            </p>
-            <h4>Instructions</h4>
-            <p>Press "Arrow Up" key to make the Pokemon jump. <br>
-                Press "Arrow Down" key to make the Pokemon duck.</p>
-            <img src="./images/keys.png" alt="arrowKeys" id="keys">
+            <p> <b>Welcome, Player!</b><br>
+                Please click a <b><I>Pokeball</I></b> to choose you <B><I>Starter</I></B> and click on <b>Start</b>.
+                <br>
+                If you want to change you <b><i>Starter</i></b> click the <b><i>Pokemon</i></b> and choose another
+                <b><i>Pokeball</i></b>. <br>
+                Click on <b>Music: On</b> to turn <b>Off</b> the sound.
+                <br> <br> The game is a scroll/run and you have to make the Pokemon Jump over the
+                obstacles or go Under. Earn point to win Gym Badges. You win if you have 8 Badges and the Pokemon Cup
+
         </div>
+
         <div id="gamescreen">
+
             <canvas width="700" height="400"> </canvas>
         </div>
         <div id="startScr">
@@ -33,7 +38,7 @@
                 <img src="./images/pokeball.png" alt="charmander" id="firstBall">
                 <img src="./images/4.svg" alt="charmender" id="charmander">
                 <img src="./images/pokeball.png" alt="bulbasaur" id="secondBall">
-                <img src="./images/1.svg" alt="bulbasaur"  id="bulbasaur">
+                <img src="./images/1.svg" alt="bulbasaur" id="bulbasaur">
                 <img src="./images/pokeball.png" alt="squirtle" id="thirdBall">
                 <img src="./images/7.svg" alt="squirtle" id="squirtle">
             </div>
@@ -57,12 +62,24 @@
 
         <div id="highscore">
             <h2 id="current">Score :<span>0</span> </h2>
-            <h2 id="highScore">High Scores</h2>
-            <div id="input-container">
-                <input type="text" id="name" maxlength="24">
-                <button id="submit" type="submit">Submit Score</button>
+            <h3 id="highScore">Badges won:</h3>
+            <div id="badges">
+                <img src="./images/Boulderbadge.png" alt="The Boulder Badge" id="boulder">
+                <img src="./images/Cascadebadge.png" alt="The Cascade Badge" id="cascade">
+                <img src="./images/Thunderbadge.png" alt="The Thunder Badge" id="thunder">
+                <img src="./images/Rainbow_Badge.png" alt="The Rainbow Badge" id="rainbow">
+                <img src="./images/Soulbadge.png" alt="The Soul Badge " id="soul">
+                <img src="./images/Marshbadge.png" alt="The Marsh Badge" id="marsh">
+                <img src="./images/Volcanobadge.png" alt="The Volcano Badge" id="volcano">
+                <img src="./images/Earthbadge.png" alt="The Earth Badge" id="earth">
             </div>
+
+            <h4>Instructions</h4>
+            <p>Press "Arrow Up" key to make the Pokemon jump. <br>
+                Press "Arrow Down" key to make the Pokemon duck.</p>
+            <img src="./images/keys.png" alt="arrowKeys" id="keys">
         </div>
+    </div>
     </div>
     <script src="./javascript/index.js"></script>
     <script src="./javascript/pokeball.js"></script>

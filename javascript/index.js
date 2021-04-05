@@ -26,7 +26,7 @@ let squirtle = document.getElementById('squirtle')
 let pokename = document.querySelector('#confirm span')
 let confirm = document.getElementById('confirm')
 // music 
-let audio = new Audio('../images/tvmix.mid')
+let audio = new Audio('/Gotta-Win-Em-All-provisory-/images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3')
 // .............................................
 
 // animation
@@ -99,16 +99,38 @@ function start() {
 // restart button
 function restart() {
     obstX = 800;
+    pokeX = 50
+    pokeY = 230
     score = 0
     currentScore.innerHTML = 0
     gameOver = false;
     startScreen.style.display = 'flex'
     gameOverScr.style.display = 'none'
+    charmander.style.display = 'none'
+    bulbasaur.style.display = 'none'
+    squirtle.style.display = 'none'
+    confirm.style.display = 'none'
+    first.style.display = 'inline'
+    second.style.display = 'inline'
+    third.style.display = 'inline'
+    intervalId = 0
+
 }
 
-
+let music = document.querySelector('#music span')
 
 window.addEventListener('load', () => {
+    music.addEventListener('click', () => {
+        if (music.innerHTML == 'On') {
+            music.innerHTML = "Off"
+            music.style.color = 'red'
+            audio.pause()
+        } else if (music.innerHTML == "Off") {
+            audio.play()
+            music.innerHTML = "On"
+            music.style.color = 'green'
+        }
+    })
     audio.play()
     draw()
     commands()
@@ -118,6 +140,7 @@ window.addEventListener('load', () => {
     charmander.style.display = 'none'
     bulbasaur.style.display = 'none'
     squirtle.style.display = 'none'
+
     startBtn.addEventListener('click', () => {
         start()
     })
