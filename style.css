@@ -1,15 +1,13 @@
 body {
-  
-
   background-color: rgba(124, 156, 223, 0.849);
 }
 .header {
   display: flex;
   justify-content: center;
 }
-header img{
-width: 50%;
-padding-top: 30px;
+header img {
+  width: 50%;
+  padding-top: 30px;
 }
 
 .body {
@@ -20,14 +18,15 @@ padding-top: 30px;
   align-items: flex-end;
 }
 
-#info, #highscore {
-  border:solid;
+#info,
+#highscore {
+  border: solid;
   background-size: cover;
   width: 250px;
   background-color: rgb(207, 219, 223);
   font-size: 1.2em;
   text-align: center;
-  padding:0 10px;
+  padding: 0 10px;
   height: 400px;
   margin: 50px;
 }
@@ -37,31 +36,33 @@ canvas {
   background-color: rgb(106, 146, 242);
 }
 
- #startScr, #gameOver ,#winScr{
-  width:700px; 
-  height:400px; 
+#startScr,
+#gameOver,
+#winScr {
+  width: 700px;
+  height: 400px;
   margin-bottom: 50px;
   border: solid;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
- 
 }
-#pokeballs img{
+#pokeballs img {
   width: 150px;
   height: 140px;
 }
-#startBtn ,#restartBtn{
+#startBtn,
+#restartBtn {
   background-color: transparent;
   border: none;
 }
-#win{
+#win {
   height: 160px;
 }
-#keys{
-height: 100px;
+#keys {
+  height: 100px;
 }
-#info p{
+#info p {
   font-size: smaller;
 }
