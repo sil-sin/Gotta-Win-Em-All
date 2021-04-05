@@ -66,3 +66,14 @@ canvas {
 #info p {
   font-size: smaller;
 }
+#confirm{
+  color: rgb(0, 0, 0);
+  font-size: x-large;
+  text-shadow: rgb(255, 238, 0)  -2px -1px ;
+}
+#confirm span{
+  color: rgb(0, 3, 1);
+  text-shadow: rgb(2, 75, 184) -1px -1px ;
+  font-size: xx-large;
+  
+}
