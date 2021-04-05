@@ -29,7 +29,7 @@ let fg1 = new Image()
 fg1.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/foreground.png?raw=true"
 // character
 let pokemon = new Image()
-pokemon.src = 'https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/1.svg?raw=true'
+pokemon.src = 'https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/pikachu%20running.gif?raw=true'
 // obstacles
 let rock = new Image()
 rock.src = 'https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/rock.png?raw=true'
