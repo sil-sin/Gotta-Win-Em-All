@@ -59,3 +59,9 @@ canvas {
 #win{
   height: 160px;
 }
+#keys{
+height: 100px;px;
+}
+#info p{
+  font-size: smaller;
+}
