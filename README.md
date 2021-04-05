@@ -8,10 +8,10 @@ The goal is to make the highest score possible.
 
 ## MVP (DOM - CANVAS)
 
-- game has a pokemon that jumps.
+- game has a pokemon that jumps(arrow up key) and ducks(arrow down key)
 - obstacles appear randomly from the right side of the screen
 - if character and obstacle have contact, the game is over
-- Increasing speed every 1000 points
+
 
 ## Backlog
 
@@ -19,25 +19,21 @@ The goal is to make the highest score possible.
 - increase difficulty
 - Ability to start the game with different characters
 - add obstacle
-- add player movement (duck/)
 
 ## Data Structure
 
-# main.js
+# index.js
 
 - buildStartScreen () {}
 - buildGameScreen () {}
 - buildGameOverScreen () {}
+- drawCanvas () {}
 
 # game.js
-
-- Game () {}
-- starLoop () {}
 - collisions () {}
 - addTentacle () {}
 - clearCanvas () {}
 - updateCanvas () {}
-- drawCanvas () {}
 - GameOver () {}
 
 # pokemon.js
@@ -101,7 +97,7 @@ Definition of the different states and their transition (transition functions)
 
 URLs for the project repo and deploy
 [Link Repo](https://github.com/sil-sin/Gotta-Win-Em-All-provisory-.git)
-[Link Deploy](https://github.com/sil-sin/Gotta-Win-Em-All-provisory-.git)
+[Link Deploy](https://sil-sin.github.io/Gotta-Win-Em-All-provisory-/)
 
 ### Slides
 
