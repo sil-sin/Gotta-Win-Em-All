@@ -5,31 +5,33 @@ canvas.style.border = '2px solid black';
 let intervalId = 0
 // game elements
 let fgX = 0, fg1X = 700, fgWidth = 700
-let obstX = 700, obstY = 200;
+let obstX = 1000, obstY = 200;
 let pokeX = 50, pokeY = 230, pokeHeight = 150, pokeWidth = 100;
 let isArrowUp = false, isArrowDown = false;
 let currentScore = document.querySelector('#current span')
 let score = 0
-let gameOver = false
+let gameOver = false, win = false
 // menu element
 let startBtn = document.getElementById('startBtn')
-let restartBtn = document.getElementById('restartBtn')
+let restartBtn = document.querySelector('.restartBtn')
+let winRestartBtn = document.querySelector("#winScr button")
 let gameOverScr = document.getElementById('gameOver')
 let startScreen = document.getElementById('startScr')
+let winScr = document.getElementById('winScr')
 let starter = ""
 let first = document.getElementById('firstBall')
-let charmander = document.getElementById('charmander')
+let Charmander = document.getElementById('charmander')
 let second = document.getElementById('secondBall')
-let bulbasaur = document.getElementById('bulbasaur')
+let Bulbasaur = document.getElementById('bulbasaur')
 let third = document.getElementById('thirdBall')
-let squirtle = document.getElementById('squirtle')
+let Squirtle = document.getElementById('squirtle')
 let egg = document.getElementById('egg')
 let pokename = document.querySelector('#confirm span')
 let confirm = document.getElementById('confirm')
 // music 
 let audio = new Audio('images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3')
 let music = document.querySelector('#music span')
-let musicBox=document.getElementById('music')
+let musicBox = document.getElementById('music')
 // .............................................
 
 // animation
@@ -52,14 +54,18 @@ function animate() {
             obstY = 320
         };
     };
+    if (obstX < 10 && obstX >= -2) {
+        score += 10
+        currentScore.innerHTML = score
+    };
     // foreground animation 
     fg1X -= 2
     fgX -= 2
     if (fgX + foreground.width < 0) {
-        fgX = canvas.width-1
+        fgX = canvas.width - 2
     };
     if (fg1X + foreground1.width < 0) {
-        fg1X = canvas.width-1
+        fg1X = canvas.width - 2
     };
 
     // game over 
@@ -67,41 +73,37 @@ function animate() {
         canvas.style.display = 'none';
         gameOverScr.style.display = 'flex';
         intervalId = 0
-        startScreen.style.display = 'none';
     } else {
         intervalId = requestAnimationFrame(animate)
     };
-    if (obstX < 20 && obstX > 0) {
-        score += 10
-        currentScore.innerHTML = score
-    };
+    if (win == true) {
+        cancelAnimationFrame(intervalId)
+    }
 }
 // start button
 function start() {
-    if (starter == "Charmander") {
-        pokemon = charmander
-        pokemon1 = charmander
-        pokemon2 = charmander
-    }
-    else if (starter == "Bulbasaur") {
-        pokemon = bulbasaur
-        pokemon1 = bulbasaur
-        pokemon2 = bulbasaur
-    }
-    else if (starter == "Squirtle") {
-        pokemon = squirtle
-        pokemon1 = squirtle
-        pokemon2 = squirtle
-    }
+
     startScreen.style.display = 'none'
     gameOverScr.style.display = 'none'
     canvas.style.display = 'block'
+
+    let counter = 0
+    let id = setInterval(() => {
+        player = pokemon
+    }, 400)
+    let id1 = setInterval(() => {
+        player = pokemon1
+    }, 350)
+    let id2 = setInterval(() => {
+        player = pokemon2
+    }, 300)
+
     animate()
 
 }
 // restart button
 function restart() {
-    obstX = 800;
+    obstX = 1000;
     pokeX = 50
     pokeY = 230
     score = 0
@@ -109,21 +111,23 @@ function restart() {
     gameOver = false;
     startScreen.style.display = 'flex'
     gameOverScr.style.display = 'none'
-    charmander.style.display = 'none'
-    bulbasaur.style.display = 'none'
-    squirtle.style.display = 'none'
+    Charmander.style.display = 'none'
+    Bulbasaur.style.display = 'none'
+    Squirtle.style.display = 'none'
     confirm.style.display = 'none'
     first.style.display = 'inline'
     second.style.display = 'inline'
     third.style.display = 'inline'
     intervalId = 0
-
+    winScr.style.display = "none"
+    win = false
+    egg.style.display='inline'
 }
 
 
 
 window.addEventListener('load', () => {
-  
+
 
     draw()
     commands()
@@ -131,10 +135,12 @@ window.addEventListener('load', () => {
     confirm.style.display = 'none'
     canvas.style.display = 'none'
     gameOverScr.style.display = 'none'
-    charmander.style.display = 'none'
-    bulbasaur.style.display = 'none'
-    squirtle.style.display = 'none'
-    
+    winScr.style.display = 'none'
+    Charmander.style.display = 'none'
+    Bulbasaur.style.display = 'none'
+    Squirtle.style.display = 'none'
+
+
     musicBox.addEventListener('click', () => {
         if (music.innerHTML == 'On') {
             music.innerHTML = "Off"
@@ -147,7 +153,7 @@ window.addEventListener('load', () => {
         }
     })
 
-   startBtn.style.display='none'
+    startBtn.style.display = 'none'
     startBtn.addEventListener('click', () => {
         start()
     })
@@ -156,4 +162,9 @@ window.addEventListener('load', () => {
     restartBtn.addEventListener('click', () => {
         restart()
     })
+    winRestartBtn.addEventListener('click', () => {
+        restart()
+
+    })
+
 })

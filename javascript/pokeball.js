@@ -3,68 +3,76 @@
 function pokeball() {
 
     first.addEventListener('click', () => {
-        charmander.style.display = 'inline'
+        Charmander.style.display = 'inline'
         first.style.display = 'none'
         starter = "Charmander"
-        console.log(starter)
         second.style.display = 'none'
         third.style.display = 'none'
         pokename.innerHTML = "Charmander"
         confirm.style.display = 'inline'
-        startBtn.style.display='inline'
-        charmander.addEventListener('click', () => {
+        startBtn.style.display = 'inline'
+        egg.style.display = 'none'
+        Charmander.addEventListener('click', () => {
             first.style.display = 'inline'
             second.style.display = 'inline'
             third.style.display = 'inline'
-            charmander.style.display = 'none'
+            Charmander.style.display = 'none'
             confirm.style.display = 'none'
-            startBtn.style.display='none'
+            startBtn.style.display = 'none'
+            egg.style.display = 'inline'
         })
     })
 
 
     second.addEventListener('click', () => {
-        bulbasaur.style.display = 'inline'
+        Bulbasaur.style.display = 'inline'
         second.style.display = 'none'
         starter = "Bulbasaur"
         first.style.display = 'none'
         third.style.display = 'none'
         pokename.innerHTML = "Bulbasaur"
         confirm.style.display = 'inline'
-        startBtn.style.display='inline'
-        bulbasaur.addEventListener('click', () => {
+        startBtn.style.display = 'inline'
+        egg.style.display = 'none'
+        Bulbasaur.addEventListener('click', () => {
             first.style.display = 'inline'
             second.style.display = 'inline'
             third.style.display = 'inline'
-            bulbasaur.style.display = 'none'
+            Bulbasaur.style.display = 'none'
             confirm.style.display = 'none'
-            startBtn.style.display='none'
+            startBtn.style.display = 'none'
+            egg.style.display = 'inline'
+
         })
     })
 
 
     third.addEventListener('click', () => {
-        squirtle.style.display = 'inline'
+        Squirtle.style.display = 'inline'
         third.style.display = 'none'
         starter = "Squirtle"
         first.style.display = 'none'
         second.style.display = 'none'
         pokename.innerHTML = "Squirtle"
         confirm.style.display = 'inline'
-        startBtn.style.display='inline'
-        squirtle.addEventListener('click', () => {
+        startBtn.style.display = 'inline'
+        egg.style.display = 'none'
+        Squirtle.addEventListener('click', () => {
             first.style.display = 'inline'
             second.style.display = 'inline'
             third.style.display = 'inline'
-            squirtle.style.display = 'none'
+            Squirtle.style.display = 'none'
             confirm.style.display = 'none'
-            startBtn.style.display='none'
+            startBtn.style.display = 'none'
+            egg.style.display = 'inline'
+
         })
     })
 
-    egg.addEventListener('click',()=>{
+    egg.addEventListener('click', () => {
         starter = "Pikachu"
-        startBtn.style.display='inline'
+        pokemon = pikachu
+        startBtn.style.display = 'inline'
         first.style.display = 'none'
         second.style.display = 'none'
         third.style.display = 'none'

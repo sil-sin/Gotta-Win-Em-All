@@ -57,7 +57,7 @@ canvas {
   height: 140px;
 }
 #startBtn,
-#restartBtn {
+.restartBtn {
   background-color: transparent;
   border: none;
 }
@@ -105,7 +105,7 @@ canvas {
   height: 30px;
 }
 
-#egg{
+#egg {
   height: 25px;
   align-self: flex-start;
   padding-bottom: 20px;
