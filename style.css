@@ -104,3 +104,9 @@ canvas {
   width: 30px;
   height: 30px;
 }
+
+#egg{
+  height: 25px;
+  align-self: flex-start;
+  padding-bottom: 20px;
+}

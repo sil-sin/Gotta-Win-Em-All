@@ -23,10 +23,13 @@ let second = document.getElementById('secondBall')
 let bulbasaur = document.getElementById('bulbasaur')
 let third = document.getElementById('thirdBall')
 let squirtle = document.getElementById('squirtle')
+let egg = document.getElementById('egg')
 let pokename = document.querySelector('#confirm span')
 let confirm = document.getElementById('confirm')
 // music 
-let audio = new Audio('/Gotta-Win-Em-All-provisory-/images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3')
+let audio = new Audio('images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3')
+let music = document.querySelector('#music span')
+let musicBox=document.getElementById('music')
 // .............................................
 
 // animation
@@ -53,12 +56,12 @@ function animate() {
     fg1X -= 2
     fgX -= 2
     if (fgX + foreground.width < 0) {
-        fgX = canvas.width
+        fgX = canvas.width-1
     };
     if (fg1X + foreground1.width < 0) {
-        fg1X = canvas.width
+        fg1X = canvas.width-1
     };
-    stages()
+
     // game over 
     if (gameOver == true) {
         canvas.style.display = 'none';
@@ -117,10 +120,22 @@ function restart() {
 
 }
 
-let music = document.querySelector('#music span')
+
 
 window.addEventListener('load', () => {
-    music.addEventListener('click', () => {
+  
+
+    draw()
+    commands()
+    // audio.play()
+    confirm.style.display = 'none'
+    canvas.style.display = 'none'
+    gameOverScr.style.display = 'none'
+    charmander.style.display = 'none'
+    bulbasaur.style.display = 'none'
+    squirtle.style.display = 'none'
+    
+    musicBox.addEventListener('click', () => {
         if (music.innerHTML == 'On') {
             music.innerHTML = "Off"
             music.style.color = 'red'
@@ -131,16 +146,8 @@ window.addEventListener('load', () => {
             music.style.color = 'green'
         }
     })
-    audio.play()
-    draw()
-    commands()
-    confirm.style.display = 'none'
-    canvas.style.display = 'none'
-    gameOverScr.style.display = 'none'
-    charmander.style.display = 'none'
-    bulbasaur.style.display = 'none'
-    squirtle.style.display = 'none'
 
+   startBtn.style.display='none'
     startBtn.addEventListener('click', () => {
         start()
     })

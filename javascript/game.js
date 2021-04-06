@@ -1,13 +1,12 @@
 // load images
 // background
-let bg = new Image()
-bg.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/skybackground.png?raw=true"
+let bg = gym1;
 // foreground
 let fg = new Image()
-fg.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/foreground.png?raw=true"
+fg.src = "../images/foreground.png"
 
-let rockFg = new Image()
-rockFg.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/alternativeFR.png?raw=true"
+// let rockFg = new Image()
+// rockFg.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/alternativeFR.png?raw=true"
 
 let foreground = fg, foreground1 = fg
 
@@ -31,9 +30,10 @@ let player = pokemon
 // 
 // drawings
 function draw() {
-    ctx.drawImage(bg, 0, 0, 700, 475)
-    ctx.drawImage(foreground, fgX, 350)
-    ctx.drawImage(foreground1, fg1X, 350)
+    gyms()
+    ctx.drawImage(bg, 0, 0, 700,400)
+    ctx.drawImage(foreground, fgX, 330)
+    ctx.drawImage(foreground1, fg1X, 330)
     ctx.drawImage(player, pokeX, pokeY, pokeWidth, pokeHeight)
     ctx.drawImage(obstacle, obstX, obstY, 70, 70)
     if (intervalId % 3 == 0) {
@@ -93,7 +93,7 @@ function commands() {
 function collision() {
     if ((obstX < pokeX + pokeWidth && obstX > pokeX) && ((pokeY > obstY && pokeY < obstY + 70)
         || (pokeY + pokeHeight > obstY && pokeY + pokeHeight < obstY + 70))) {
-        gameOver = true
+        gameOver = false
     }
 
 }

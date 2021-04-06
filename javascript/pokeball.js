@@ -11,12 +11,14 @@ function pokeball() {
         third.style.display = 'none'
         pokename.innerHTML = "Charmander"
         confirm.style.display = 'inline'
+        startBtn.style.display='inline'
         charmander.addEventListener('click', () => {
             first.style.display = 'inline'
             second.style.display = 'inline'
             third.style.display = 'inline'
             charmander.style.display = 'none'
             confirm.style.display = 'none'
+            startBtn.style.display='none'
         })
     })
 
@@ -29,12 +31,14 @@ function pokeball() {
         third.style.display = 'none'
         pokename.innerHTML = "Bulbasaur"
         confirm.style.display = 'inline'
+        startBtn.style.display='inline'
         bulbasaur.addEventListener('click', () => {
             first.style.display = 'inline'
             second.style.display = 'inline'
             third.style.display = 'inline'
             bulbasaur.style.display = 'none'
             confirm.style.display = 'none'
+            startBtn.style.display='none'
         })
     })
 
@@ -47,14 +51,23 @@ function pokeball() {
         second.style.display = 'none'
         pokename.innerHTML = "Squirtle"
         confirm.style.display = 'inline'
+        startBtn.style.display='inline'
         squirtle.addEventListener('click', () => {
             first.style.display = 'inline'
             second.style.display = 'inline'
             third.style.display = 'inline'
             squirtle.style.display = 'none'
             confirm.style.display = 'none'
+            startBtn.style.display='none'
         })
     })
 
+    egg.addEventListener('click',()=>{
+        starter = "Pikachu"
+        startBtn.style.display='inline'
+        first.style.display = 'none'
+        second.style.display = 'none'
+        third.style.display = 'none'
+    })
 }
 pokeball()

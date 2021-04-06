@@ -15,14 +15,14 @@
     </header>
     <div class="body">
         <div id="info">
-            <p id="music"> Music : <span>On</span> </p>
+            <button id="music"> Music : <span>On</span> </button>
             <h2>Game Info</h2>
             <p> <b>Welcome, Player!</b><br>
-                Please click a <b><I>Pokeball</I></b> to choose you <B><I>Starter</I></B> and click on <b>Start</b>.
+                Please click a <b>Pokeball</b> to choose your <B>Starter</B> and click on <b>Start</b>.
                 <br>
-                If you want to change you <b><i>Starter</i></b> click the <b><i>Pokemon</i></b> and choose another
+                If you want to change your <b><i>Starter</i></b> click the <b><i>Pokemon</i></b> and choose another
                 <b><i>Pokeball</i></b>. <br>
-                Click on <b>Music: On</b> to turn <b>Off</b> the sound.
+                Click on <b>Music </b> to turn <b>On/Off</b> the sound.
                 <br> <br> The game is a scroll/run and you have to make the Pokemon Jump over the
                 obstacles or go Under. Earn point to win Gym Badges. You win if you have 8 Badges and the Pokemon Cup
 
@@ -33,7 +33,8 @@
             <canvas width="700" height="400"> </canvas>
         </div>
         <div id="startScr">
-            <img src="./images/chooseStarter.png" alt="choose your pokemon">
+            <div><img src="./images/chooseStarter.png" alt="choose your pokemon">
+                <img src="./images/egg.png" alt="egg" id='egg'></div>
             <div id="pokeballs">
                 <img src="./images/pokeball.png" alt="charmander" id="firstBall">
                 <img src="./images/4.svg" alt="charmender" id="charmander">
@@ -62,7 +63,7 @@
 
         <div id="highscore">
             <h2 id="current">Score :<span>0</span> </h2>
-            <h3 id="highScore">Badges won:</h3>
+            <h3 id="highScore">Badges:</h3>
             <div id="badges">
                 <img src="./images/Boulderbadge.png" alt="The Boulder Badge" id="boulder">
                 <img src="./images/Cascadebadge.png" alt="The Cascade Badge" id="cascade">
