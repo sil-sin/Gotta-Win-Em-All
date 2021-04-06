@@ -114,7 +114,7 @@ function commands() {
 function collision() {
     if ((obstX < pokeX + pokeWidth && obstX > pokeX) && ((pokeY > obstY && pokeY < obstY + 70)
         || (pokeY + pokeHeight > obstY && pokeY + pokeHeight < obstY + 70))) {
-        gameOver = false
+        gameOver = true
     }
 
 }
