@@ -3,7 +3,7 @@
 
 ## Description
 
-Gotta Win Em All! is a Pokemon-themed game,  scroll/ run type, where the player has to make the character jump or duck over/under the obstacles that will be coming at it. If the character collides with the obstacle then is Game Over.
+Gotta Win Em All! is a Pokemon-themed game, side scroller type, where the player has to make the character jump or duck over/under the obstacles that will be coming at it. If the character collides with the obstacle then is Game Over.
 If you manage to evade the obstacles you win Badges. Win 8 badges + the Pokemon Cup to win the game.
 
 ## MVP (DOM - CANVAS)
