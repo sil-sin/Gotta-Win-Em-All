@@ -1,5 +1,6 @@
 # Gotta Win Em All!
 
+
 ## Description
 
 Gotta Win Em All! is a Pokemon-themed game, side scroller type, where the player has to make the character jump or duck over/under the obstacles that will be coming at it. If the character collides with the obstacle then is Game Over.
@@ -11,9 +12,10 @@ If you manage to evade the obstacles you win Badges. Win 8 badges + the Pokemon 
 - obstacles appear randomly from the right side of the screen
 - if character and obstacle have contact, the game is over
 
+
 ## Backlog
 
-- add 9 levels, increase level every 200points, except the final level will be 400 points
+- add 9 levels, increase level  every 200points, except the final level will be 400 points
 - increase obstacle speed
 - Ability to start the game with different characters
 - add different obstacles
@@ -28,7 +30,6 @@ If you manage to evade the obstacles you win Badges. Win 8 badges + the Pokemon 
 - drawCanvas () {}
 
 # game.js
-
 - collisions () {}
 - animate() {}
 - clearCanvas () {}
@@ -96,9 +97,10 @@ Definition of the different states and their transition (transition functions)
 
 URLs for the project repo and deploy
 [Link Repo](https://github.com/sil-sin/Gotta-Win-Em-All.git)
-[Link Deploy](https://sil-sin.github.io/Gotta-Win-Em-All/)
+[Link Deploy](https://sil-sin.github.io/Gotta-Win-Em-All-provisory/)
 
 ### Slides
 
 URLs for the project presentation (slides)
 [Link Slides.com](https://docs.google.com)
+
