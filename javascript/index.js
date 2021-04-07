@@ -1,9 +1,8 @@
 let canvas = document.querySelector('canvas');
 let ctx = canvas.getContext('2d')
 canvas.style.border = '2px solid black';
-
-let intervalId = 0
 // game elements
+let intervalId = 0
 let fgX = 0, fg1X = 700, fgWidth = 700
 let obstX = 1000, obstY = 200;
 let pokeX = 50, pokeY = 230, pokeHeight = 150, pokeWidth = 100;
@@ -103,7 +102,7 @@ function start() {
         player = pokemon2
     }, 402)
     startMusic.play()
-    audio.pause()
+    // audio.pause()
     animate()
     
 }
@@ -135,11 +134,7 @@ function restart() {
     
 }
 
-
-
 window.addEventListener('load', () => {
-
-
     draw()
     commands()
     audio.pause()
@@ -150,7 +145,7 @@ window.addEventListener('load', () => {
     Charmander.style.display = 'none'
     Bulbasaur.style.display = 'none'
     Squirtle.style.display = 'none'
-
+    startBtn.style.display = 'none'
 
     musicBox.addEventListener('click', () => {
         if (music.innerHTML == 'On') {
@@ -158,18 +153,15 @@ window.addEventListener('load', () => {
             music.style.color = 'red'
             audio.pause()
         } else if (music.innerHTML == "Off") {
+            audio.volume = 0.09
             audio.play()
             music.innerHTML = "On"
             music.style.color = 'green'
         }
     })
-
-    startBtn.style.display = 'none'
     startBtn.addEventListener('click', () => {
         start()
     })
-
-
     restartBtn.addEventListener('click', () => {
         restart()
     })
