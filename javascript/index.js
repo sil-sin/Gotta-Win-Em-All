@@ -90,13 +90,14 @@ function start() {
     let counter = 0
     let id = setInterval(() => {
         player = pokemon
-    }, 400)
+    }, 200)
     let id1 = setInterval(() => {
         player = pokemon1
-    }, 350)
+    }, 300)
     let id2 = setInterval(() => {
         player = pokemon2
-    }, 300)
+    }, 400)
+    
 
     animate()
 
@@ -121,7 +122,8 @@ function restart() {
     intervalId = 0
     winScr.style.display = "none"
     win = false
-    egg.style.display='inline'
+    egg.style.display = 'inline'
+    bg=gym1
 }
 
 

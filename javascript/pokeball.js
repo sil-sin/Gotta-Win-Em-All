@@ -72,6 +72,8 @@ function pokeball() {
     egg.addEventListener('click', () => {
         starter = "Pikachu"
         pokemon = pikachu
+        pokemon1 = pikachu1
+        pokemon2 = pikachu2
         startBtn.style.display = 'inline'
         first.style.display = 'none'
         second.style.display = 'none'
