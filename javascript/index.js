@@ -153,7 +153,7 @@ window.addEventListener('load', () => {
             music.style.color = 'red'
             audio.pause()
         } else if (music.innerHTML == "Off") {
-            audio.volume = 0.09
+            audio.volume = 0.05
             audio.play()
             music.innerHTML = "On"
             music.style.color = 'green'
