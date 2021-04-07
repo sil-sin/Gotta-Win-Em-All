@@ -97,7 +97,7 @@ Definition of the different states and their transition (transition functions)
 
 URLs for the project repo and deploy
 [Link Repo](https://github.com/sil-sin/Gotta-Win-Em-All.git)
-[Link Deploy](https://sil-sin.github.io/Gotta-Win-Em-All-provisory/)
+[Link Deploy](https://sil-sin.github.io/Gotta-Win-Em-All-provisory-/)
 
 ### Slides
 
