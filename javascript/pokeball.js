@@ -80,4 +80,5 @@ function pokeball() {
         third.style.display = 'none'
     })
 }
+
 pokeball()

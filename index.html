@@ -10,15 +10,14 @@
 </head>
 
 <body>
-    <header class="header">
+    <header>
         <img src="./images/gameTitle.png" alt="title-img" id="title">
     </header>
     <div class="body">
         <div id="info">
-            <button id="music"> Music : <span>On</span> </button>
+            <button id="music"> Music : <span style="color:  red;">Off</span> </button>
             <h2>Welcome, Player!</h2>
-            <p> <br>
-                The game is a side scroll, where you control the Pokemon to
+            <p>The game is a side scroll, where you control the Pokemon to
                 <i>jump over</i> or <i>duck under</i> the obstacles. Earn points to win Gym Badges. Collect 8 badges and
                 the Pokemon Cup to win.
             <h3 id="current">Score : <br> <span>0</span> </h3>
@@ -36,7 +35,6 @@
 
 
         </div>
-
         <div id="gamescreen">
 
             <canvas width="700" height="400"> </canvas>
@@ -67,15 +65,10 @@
             <img src="./images/win.gif" alt="win" id="win">
             <button class="restartBtn"><img src="./images/restart.png" alt="restartbtn"></button>
         </div>
-
-
-
-        <div id="highscore">
-
-
+        <div id="instructions">
             <h2>Instructions</h2>
             <p> Click the <img src="./images/pokeball.png" alt="charmander" id="firstBall" style="width: 25px;"> to see
-                your <B>Pokemon</B>
+                your <br> <B>Pokemon</B>
                 <img src="./images/egg.png" alt="egg" id='egg'>. <br>
                 Click the Pokemon to go back. <br>
                 Click <img src="./images/Start.png" alt="startbtn" style="width: 35px;"> to start the game. <br>
@@ -87,6 +80,10 @@
         </div>
     </div>
     </div>
+    <footer>
+        <p style="color:rgb(38, 0, 255); font-size: large; margin-top: -25px;text-align: center;">
+            This game is a tribute to Pokemon Anime and Games that have given us amazing childhood memories</p>
+    </footer>
     <script src="./javascript/index.js"></script>
     <script src="./javascript/pokeball.js"></script>
     <script src="./javascript/stages.js"></script>

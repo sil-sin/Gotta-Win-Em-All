@@ -29,9 +29,12 @@ let egg = document.getElementById('egg')
 let pokename = document.querySelector('#confirm span')
 let confirm = document.getElementById('confirm')
 // music 
-let audio = new Audio('images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3')
+let audio = new Audio('../images/Jason Paige - Pokémon Theme Song (minus).mp3')
 let music = document.querySelector('#music span')
 let musicBox = document.getElementById('music')
+let winMusic = new Audio("../images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3'")
+let startMusic = new Audio('https://soundcloud.com/mosky-2000/sm64-custom-music-pewter-city-theme-pokemon-firered-leafgreen')
+let gameoverMusic = new Audio('')
 // .............................................
 
 // animation
@@ -48,9 +51,9 @@ function animate() {
         num = Math.floor(Math.random() * 10);
         if (num > 5) {
             obstY = 200
-            obstacle = rock
+            obstacle = obstUp
         } else {
-            obstacle = rock1
+            obstacle = obstDown
             obstY = 320
         };
     };
@@ -77,6 +80,7 @@ function animate() {
         intervalId = requestAnimationFrame(animate)
     };
     if (win == true) {
+        winMusic.play()
         cancelAnimationFrame(intervalId)
     }
 }
@@ -90,15 +94,15 @@ function start() {
     let counter = 0
     let id = setInterval(() => {
         player = pokemon
-    }, 200)
+    }, 210)
     let id1 = setInterval(() => {
         player = pokemon1
-    }, 300)
+    }, 305)
     let id2 = setInterval(() => {
         player = pokemon2
-    }, 400)
-    
-
+    }, 402)
+    startMusic.play()
+    audio.pause()
     animate()
 
 }
@@ -123,7 +127,12 @@ function restart() {
     winScr.style.display = "none"
     win = false
     egg.style.display = 'inline'
-    bg=gym1
+    bg = gym1
+    gameoverMusic.pause()
+    winMusic.pause()
+    startMusic.pause()
+    obstUp = rock
+    obstDown = rock1
 }
 
 
@@ -133,7 +142,7 @@ window.addEventListener('load', () => {
 
     draw()
     commands()
-    // audio.play()
+    audio.pause()
     confirm.style.display = 'none'
     canvas.style.display = 'none'
     gameOverScr.style.display = 'none'

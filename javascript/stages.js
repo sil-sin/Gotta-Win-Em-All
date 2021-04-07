@@ -3,8 +3,14 @@ let gym1 = new Image()
 gym1.src = "../images/mountain-range-stretching.webp"
 let gym2 = new Image()
 gym2.src = "../images/skybackground.png"
+let water = new Image()
+water.src = "/images/waterdrop.png"
 let gym3 = new Image()
 gym3.src = '../images/Vermillion-City.jpg'
+let thunderbolt = new Image()
+thunderbolt.src="/images/thunderbolt.png"
+let electric =new Image()
+electric.src = "/images/electric.png"
 let gym4 = new Image()
 gym4.src = '../images/Flowerfield.jpg'
 let gym5 = new Image()
@@ -40,13 +46,18 @@ function gyms() {
         bg = gym2
         boulder.style.display = 'inline'
         obstX -= 1
+        fg1X -= 1
+        fgX -= 1
 
+       obstUp = cascade
+       obstDown = water
     }
     if (score >= 400) {
         bg = gym3
         cascade.style.display = 'inline'
         obstX -= 1
-
+        obstUp = thunderbolt
+        obstDown = electric
     }
     if (score > 600) {
         bg = gym4

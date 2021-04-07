@@ -28,6 +28,13 @@ let bulbasaur2 = new Image()
 bulbasaur2.src = "../images/bulba1.png"
 let bulbasaur1 = new Image()
 bulbasaur1.src = "../images/bulba2.png"
+// squirtle
+let squirtle = new Image()
+squirtle.src="../images/squi0.png"
+let squirtle1 = new Image()
+squirtle1.src = "../images/squi1.png"
+let squirtle2 = new Image()
+squirtle2.src = "../images/squi2.png"
 // obstacles
 // rocks
 let rock = new Image()
@@ -35,8 +42,10 @@ rock.src = 'https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/ima
 let rock1 = new Image()
 rock1.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/rock1.png?raw=true"
 // waterdrops
-// 
-let obstacle = rock
+//
+let obstUp = rock
+let obstDown = rock1
+let obstacle = obstUp
 let pokemon = first, pokemon1 = pikachu1, pokemon2 = pikachu2
 let player = pokemon
 
@@ -55,8 +64,8 @@ function draw() {
     }
     else if (starter == "Squirtle") {
         pokemon = squirtle
-        pokemon1 = squirtle
-        pokemon2 = squirtle
+        pokemon1 = squirtle1
+        pokemon2 = squirtle2
     }
    
     ctx.drawImage(bg, 0, 0, 700, 400)

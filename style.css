@@ -1,7 +1,7 @@
 body {
   background-color: rgba(124, 156, 223, 0.849);
 }
-.header {
+header {
   display: flex;
   justify-content: center;
 }
@@ -9,7 +9,6 @@ header img {
   width: 50%;
   padding-top: 30px;
 }
-
 .body {
   margin-top: 40px;
   display: flex;
@@ -17,9 +16,8 @@ header img {
   flex-wrap: wrap;
   align-items: flex-end;
 }
-
 #info,
-#highscore {
+#instructions {
   border: solid;
   background-size: cover;
   width: 250px;
@@ -30,11 +28,10 @@ header img {
   height: 400px;
   margin: 50px;
 }
-#info h2,
-p {
-  margin: 0;
+#info h2 {
+  padding: 0;
+  margin: 1px;
 }
-
 canvas {
   margin-bottom: 50px;
   background-color: rgb(106, 146, 242);
@@ -67,7 +64,7 @@ canvas {
 #keys {
   height: 70px;
 }
-#info p {
+p {
   font-size: 0.9em;
 }
 #confirm {
@@ -81,19 +78,12 @@ canvas {
   font-size: xx-large;
 }
 #music {
-  position: relative;
-  top: 0px;
-  left: 0;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-weight: bolder;
   background-color: white;
   border-radius: 5px;
   padding: 5px;
 }
-#music span {
-  color: green;
-}
-
 #badges {
   display: flex;
   width: 240px;
@@ -104,7 +94,6 @@ canvas {
   width: 30px;
   height: 30px;
 }
-
 #egg {
   width: 20px;
 }
