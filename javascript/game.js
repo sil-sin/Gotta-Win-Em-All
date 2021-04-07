@@ -42,6 +42,7 @@ let player = pokemon
 
 // drawings
 function draw() {
+    gyms()
     if (starter == "Charmander") {
         pokemon = charmander
         pokemon1 = charmander1
@@ -57,7 +58,7 @@ function draw() {
         pokemon1 = squirtle
         pokemon2 = squirtle
     }
-    gyms()
+   
     ctx.drawImage(bg, 0, 0, 700, 400)
     ctx.drawImage(foreground, fgX, 330)
     ctx.drawImage(foreground1, fg1X, 330)
@@ -112,7 +113,7 @@ function commands() {
 }
 // collision
 function collision() {
-    if ((obstX < pokeX + pokeWidth && obstX > pokeX) && ((pokeY > obstY && pokeY < obstY + 70)
+    if ((obstX < pokeX + pokeWidth && obstX > pokeX) && ((pokeY > obstY && pokeY < obstY + 70) || (pokeY + (pokeHeight / 2) > obstY && pokeY + (pokeHeight / 2) < obstY + 70)
         || (pokeY + pokeHeight > obstY && pokeY + pokeHeight < obstY + 70))) {
         gameOver = true
     }
