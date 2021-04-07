@@ -90,7 +90,8 @@ function start() {
     startScreen.style.display = 'none'
     gameOverScr.style.display = 'none'
     canvas.style.display = 'block'
-
+    obstUp = rock
+    obstDown = rock1
     let counter = 0
     let id = setInterval(() => {
         player = pokemon
@@ -104,7 +105,7 @@ function start() {
     startMusic.play()
     audio.pause()
     animate()
-
+    
 }
 // restart button
 function restart() {
@@ -131,8 +132,7 @@ function restart() {
     gameoverMusic.pause()
     winMusic.pause()
     startMusic.pause()
-    obstUp = rock
-    obstDown = rock1
+    
 }
 
 

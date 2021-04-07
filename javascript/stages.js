@@ -13,12 +13,24 @@ let electric =new Image()
 electric.src = "/images/electric.png"
 let gym4 = new Image()
 gym4.src = '../images/Flowerfield.jpg'
+let tree = new Image()
+tree.src = "/images/tree.png"
+let leaf = new Image()
+leaf.src = "/images/leaf.png"
 let gym5 = new Image()
 gym5.src = "../images/Toxic0.jpg"
+let sludge = new Image()
+sludge.src = "/images/sludge.png"
+let mudwall = new Image()
+mudwall.src = "/images/mudwall.png"
 let gym6 = new Image()
 gym6.src = "../images/Psychic.jpg"
 let gym7 = new Image()
 gym7.src = '../images/Volcano.jpg'
+let fire = new Image()
+fire.src ='/images/fire.png'
+let fireball = new Image()
+fireball.src = '/images/fireball.png'
 let gym8 = new Image()
 gym8.src = "../images/Sand.jpg"
 let plateau = new Image()
@@ -42,7 +54,7 @@ marsh.style.display = 'none'
 volcano.style.display = 'none'
 earth.style.display = 'none'
 function gyms() {
-    if (score >= 200) {
+    if (score >= 20) {
         bg = gym2
         boulder.style.display = 'inline'
         obstX -= 1
@@ -52,45 +64,56 @@ function gyms() {
        obstUp = cascade
        obstDown = water
     }
-    if (score >= 400) {
+    if (score >= 40) {
         bg = gym3
         cascade.style.display = 'inline'
         obstX -= 1
         obstUp = thunderbolt
         obstDown = electric
     }
-    if (score > 600) {
+    if (score > 60) {
         bg = gym4
         thunder.style.display = 'inline'
         obstX -= 1
+        obstUp = leaf
+        obstDown = tree
     }
-    if (score > 800) {
+    if (score > 80) {
         bg = gym5
         rainbow.style.display = 'inline'
         obstX -= 1
-
+        obstUp = sludge
+        obstDown = mudwall
     }
-    if (score > 1000) {
+    if (score > 100) {
         bg = gym6
         soul.style.display = 'inline'
         obstX -= 0.5
+        obstUp = marsh
+        obstDown = rock
     }
-    if (score > 1200) {
+    if (score > 120) {
         bg = gym7
         marsh.style.display = 'inline'
         obstX -= 0.5
+        obstUp = fireball
+        obstDown = fire 
     }
-    if (score > 1400) {
+    if (score > 140) {
         bg = gym8
         volcano.style.display = 'inline'
         obstX -= 0.5
+        obstUp = rock
+        obstDown = rock1
     }
-    if (score >= 1600) {
+    if (score >= 160) {
         bg = plateau
         earth.style.display = 'inline'
         obstX -= 0.5
+        obstUp = rock
+        obstDown = rock1
     }
-    if (score >= 2000) {
+    if (score >= 200) {
         winScr.style.display = 'flex'
         canvas.style.display = 'none'
         win = true
