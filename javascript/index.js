@@ -36,7 +36,7 @@ function animate() {
 
 
     draw()
-   
+
     collision()
     //obstacle animation
     let num = 0
@@ -125,7 +125,7 @@ function restart() {
     first.style.display = 'inline'
     second.style.display = 'inline'
     third.style.display = 'inline'
-    pikapool.style.display='none'
+    pikapool.style.display = 'none'
     intervalId = 0
     winScr.style.display = "none"
     win = false
@@ -133,8 +133,8 @@ function restart() {
     bg = gym1
     gameoverMusic.pause()
     winMusic.pause()
-    if (music.innerHTML == 'On'){
-        audio.volume= 0.05
+    if (music.innerHTML == 'On') {
+        audio.volume = 0.05
         audio.play()
     }
     // badges()
@@ -143,7 +143,7 @@ function restart() {
 
 window.addEventListener('load', () => {
     badges()
-    pikapool.style.display='none'
+    pikapool.style.display = 'none'
     // draw()
     // commands()
     winMusic.pause()
@@ -175,7 +175,7 @@ window.addEventListener('load', () => {
     })
     restartBtn.addEventListener('click', () => {
         restart()
-        
+
     })
     winRestartBtn.addEventListener('click', () => {
         restart()

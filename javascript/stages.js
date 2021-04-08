@@ -56,7 +56,7 @@ function badges() {
     earth.style.display = 'none'
 }
 function gyms() {
-    if (score >= 250) {
+    if (score >= 60) {
         bg = gym2
         boulder.style.display = 'inline'
         obstX -= 1
@@ -66,7 +66,7 @@ function gyms() {
         obstUp = cascade
         obstDown = water
     }
-    if (score >= 500) {
+    if (score >= 120) {
         bg = gym3
         cascade.style.display = 'inline'
         obstX -= 1
@@ -75,7 +75,7 @@ function gyms() {
         fg1X -= 1
         fgX -= 1
     }
-    if (score > 750) {
+    if (score > 180) {
         bg = gym4
         thunder.style.display = 'inline'
         obstX -= 1
@@ -84,7 +84,7 @@ function gyms() {
         fg1X -= 1
         fgX -= 1
     }
-    if (score > 1000) {
+    if (score > 240) {
         bg = gym5
         rainbow.style.display = 'inline'
         obstX -= 1
@@ -94,7 +94,7 @@ function gyms() {
         fg1X -= 1
         fgX -= 1
     }
-    if (score > 1250) {
+    if (score > 300) {
         bg = gym6
         soul.style.display = 'inline'
         obstX -= 0.5
@@ -103,7 +103,7 @@ function gyms() {
         fg1X -= 1
         fgX -= 1
     }
-    if (score > 1500) {
+    if (score > 360) {
         bg = gym7
         marsh.style.display = 'inline'
         obstX -= 0.5
@@ -112,7 +112,7 @@ function gyms() {
         fg1X -= 1
         fgX -= 1
     }
-    if (score > 1750) {
+    if (score > 420) {
         bg = gym8
         volcano.style.display = 'inline'
         obstX -= 0.5
@@ -121,7 +121,7 @@ function gyms() {
         fg1X -= 1
         fgX -= 1
     }
-    if (score >= 2500 ) {
+    if (score >= 480) {
         bg = plateau
         earth.style.display = 'inline'
         obstX -= 1
