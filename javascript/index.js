@@ -125,6 +125,7 @@ function restart() {
     first.style.display = 'inline'
     second.style.display = 'inline'
     third.style.display = 'inline'
+    pikapool.style.display='none'
     intervalId = 0
     winScr.style.display = "none"
     win = false
@@ -142,7 +143,7 @@ function restart() {
 
 window.addEventListener('load', () => {
     badges()
-   
+    pikapool.style.display='none'
     // draw()
     // commands()
     winMusic.pause()
