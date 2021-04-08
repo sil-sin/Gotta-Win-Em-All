@@ -1,5 +1,5 @@
-
-
+let pikaHead = document.getElementById('pika')
+pikaHead.style.display = "none"
 function pokeball() {
     first.addEventListener('mouseover', () => {
         first.style.borderColor = 'orangered';
@@ -82,6 +82,16 @@ function pokeball() {
         })
     })
 
+    pikaHead.addEventListener('click', () => {
+        starter = "Pikachu"
+        pokemon = pikachu
+        pokemon1 = pikachu1
+        pokemon2 = pikachu2
+        startBtn.style.display = 'inline'
+        first.style.display = 'none'
+        second.style.display = 'none'
+        third.style.display = 'none'
+    })
     egg.addEventListener('click', () => {
         starter = "Pikachu"
         pokemon = pikachu
@@ -91,6 +101,14 @@ function pokeball() {
         first.style.display = 'none'
         second.style.display = 'none'
         third.style.display = 'none'
+    })
+    egg.addEventListener('mouseover', () => {
+        egg.style.display = 'none'
+        pikaHead.style.display = 'inline'
+    })
+    pikaHead.addEventListener('mouseover', () => {
+        egg.style.display = 'inline'
+        pikaHead.style.display = 'none'
     })
 }
 pokeball()

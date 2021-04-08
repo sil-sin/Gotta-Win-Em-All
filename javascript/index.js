@@ -25,22 +25,16 @@ let musicBox = document.getElementById('music')
 let winMusic = new Audio("../images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3")
 let gameoverMusic = new Audio('/images/Ugly Flute and Kazoo Home Alone Theme - TikTok Audio (320 kbps).mp3')
 // .............................................
+let pause = false
+
+
+
 
 // animation
 function animate() {
-    let pause = false
-    let play =false
-    // document.addEventListener('keydown', (event) => {
 
-    //     if (event.code == 'ArrowDown') {
-    //         isArrowDown = true
-    //         isArrowUp = false
-    //     }
-    //     else if (event.code == 'ArrowUp') {
-    //         isArrowDown = false
-    //         isArrowUp = true
-    //     }
-    
+
+
     draw()
     commands()
     collision()
@@ -138,16 +132,18 @@ function restart() {
     bg = gym1
     gameoverMusic.pause()
     winMusic.pause()
-    audio.load()
-    badges()
+    if (music.innerHTML == 'On'){
+        audio.volume= 0.05
+        audio.play()
+    }
+    // badges()
 
 }
 
 window.addEventListener('load', () => {
     badges()
-    draw()
-    commands()
-    audio.pause()
+    // draw()
+    // commands()
     winMusic.pause()
     confirm.style.display = 'none'
     canvas.style.display = 'none'
@@ -177,12 +173,23 @@ window.addEventListener('load', () => {
     })
     restartBtn.addEventListener('click', () => {
         restart()
-
+        
     })
     winRestartBtn.addEventListener('click', () => {
         restart()
 
 
     })
-    
+    // pause
+    document.addEventListener('keydown', (event) => {
+        if (event.code == 'KeyP') {
+            if (pause == false) {
+                cancelAnimationFrame(intervalId)
+                pause = true
+            } else {
+                requestAnimationFrame(animate)
+                pause = false
+            }
+        }
+    })
 })

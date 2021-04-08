@@ -88,7 +88,7 @@ function draw() {
 //commands 
 function commands() {
     document.addEventListener('keydown', (event) => {
-
+        console.log(event)
         if (event.code == 'ArrowDown') {
             isArrowDown = true
             isArrowUp = false
@@ -98,10 +98,11 @@ function commands() {
             isArrowUp = true
         }
     })
-
+  
     document.addEventListener('keyup', () => {
         isArrowDown = false
         isArrowUp = false
+     
     })
 
     if (isArrowUp && pokeY > 220) {
@@ -133,8 +134,6 @@ function collision() {
         || (pokeY + pokeHeight > obstY && pokeY + pokeHeight < obstY + 70))) {
         gameOver = true
         badges()
-        music.innerHTML = "Off"
-        music.style.color = 'red'
         audio.pause()
         gameoverMusic.load()
         gameoverMusic.volume = 0.05
