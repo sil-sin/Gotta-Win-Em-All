@@ -130,12 +130,12 @@ function commands() {
 function collision() {
     if ((obstX < pokeX + pokeWidth && obstX > pokeX) && ((pokeY > obstY && pokeY < obstY + 70) || (pokeY + (pokeHeight / 2) > obstY && pokeY + (pokeHeight / 2) < obstY + 70)
         || (pokeY + pokeHeight > obstY && pokeY + pokeHeight < obstY + 70))) {
-        gameOver = false
+        gameOver = true
         badges()
         audio.pause()
-        // gameoverMusic.load()
-        // gameoverMusic.volume = 0.05
-        // gameoverMusic.play()
+        gameoverMusic.load()
+        gameoverMusic.volume = 0.05
+        gameoverMusic.play()
     }
 
 }
