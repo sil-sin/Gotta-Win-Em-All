@@ -38,7 +38,7 @@ let bulbasaur1 = new Image()
 bulbasaur1.src = "../images/bulba2.png"
 // squirtle
 let squirtle = new Image()
-squirtle.src="../images/squi0.png"
+squirtle.src = "../images/squi0.png"
 let squirtle1 = new Image()
 squirtle1.src = "../images/squi1.png"
 let squirtle2 = new Image()
@@ -59,7 +59,7 @@ let player = pokemon
 
 // drawings
 function draw() {
-    
+
     if (starter == "Charmander") {
         pokemon = charmander
         pokemon1 = charmander1
@@ -75,7 +75,7 @@ function draw() {
         pokemon1 = squirtle1
         pokemon2 = squirtle2
     }
-   
+
     ctx.drawImage(bg, 0, 0, 700, 400)
     ctx.drawImage(foreground, fgX, 330)
     ctx.drawImage(foreground1, fg1X, 330)
@@ -132,10 +132,12 @@ function collision() {
     if ((obstX < pokeX + pokeWidth && obstX > pokeX) && ((pokeY > obstY && pokeY < obstY + 70) || (pokeY + (pokeHeight / 2) > obstY && pokeY + (pokeHeight / 2) < obstY + 70)
         || (pokeY + pokeHeight > obstY && pokeY + pokeHeight < obstY + 70))) {
         gameOver = true
-        ctx.clearRect(0, 0,canvas.width,canvas.height)
+        badges()
+        music.innerHTML = "Off"
+        music.style.color = 'red'
         audio.pause()
         gameoverMusic.load()
-        gameoverMusic.volume=0.05
+        gameoverMusic.volume = 0.05
         gameoverMusic.play()
     }
 

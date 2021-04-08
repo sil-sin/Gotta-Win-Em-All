@@ -22,8 +22,7 @@ let confirm = document.getElementById('confirm')
 let audio = new Audio('../images/Jason Paige - Pokémon Theme Song (minus).mp3')
 let music = document.querySelector('#music span')
 let musicBox = document.getElementById('music')
-let winMusic = new Audio("../images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3'")
-// let startMusic = new Audio('https://soundcloud.com/mosky-2000/sm64-custom-music-pewter-city-theme-pokemon-firered-leafgreen')
+let winMusic = new Audio("../images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3")
 let gameoverMusic = new Audio('/images/Ugly Flute and Kazoo Home Alone Theme - TikTok Audio (320 kbps).mp3')
 // .............................................
 
@@ -71,7 +70,13 @@ function animate() {
         intervalId = requestAnimationFrame(animate)
     };
     if (win == true) {
+        music.innerHTML = "Off"
+        music.style.color = 'red'
+        audio.pause()
+        winMusic.load()
+        winMusic.volume = 0.05
         winMusic.play()
+
         cancelAnimationFrame(intervalId)
     }
 }
@@ -120,14 +125,17 @@ function restart() {
     bg = gym1
     gameoverMusic.pause()
     winMusic.pause()
-    startMusic.pause()
+    audio.load()
+    badges()
 
 }
 
 window.addEventListener('load', () => {
+    badges()
     draw()
     commands()
     audio.pause()
+    winMusic.pause()
     confirm.style.display = 'none'
     canvas.style.display = 'none'
     gameOverScr.style.display = 'none'
@@ -143,11 +151,12 @@ window.addEventListener('load', () => {
             music.style.color = 'red'
             audio.pause()
         } else if (music.innerHTML == "Off") {
-            audio.volume = 0.05
-            audio.play()
-            audio.loop() = true
             music.innerHTML = "On"
             music.style.color = 'green'
+            audio.volume = 0.05
+            audio.play()
+            audio.loop = true
+
         }
     })
     startBtn.addEventListener('click', () => {
@@ -155,9 +164,11 @@ window.addEventListener('load', () => {
     })
     restartBtn.addEventListener('click', () => {
         restart()
+
     })
     winRestartBtn.addEventListener('click', () => {
         restart()
+
 
     })
 
