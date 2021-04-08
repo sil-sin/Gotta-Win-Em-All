@@ -5,7 +5,15 @@ let bg = gym1;
 let fg = new Image()
 fg.src = "../images/foreground.png"
 let foreground = fg, foreground1 = fg
-
+// game elements
+let intervalId = 0
+let fgX = 0, fg1X = 700, fgWidth = 700
+let obstX = 1000, obstY = 200;
+let pokeX = 50, pokeY = 230, pokeHeight = 150, pokeWidth = 100;
+let isArrowUp = false, isArrowDown = false;
+let currentScore = document.querySelector('#current span')
+let score = 0
+let gameOver = false, win = false
 // character
 // pikachu
 let pikachu = new Image()
@@ -51,7 +59,7 @@ let player = pokemon
 
 // drawings
 function draw() {
-    gyms()
+    
     if (starter == "Charmander") {
         pokemon = charmander
         pokemon1 = charmander1
@@ -73,7 +81,7 @@ function draw() {
     ctx.drawImage(foreground1, fg1X, 330)
     ctx.drawImage(player, pokeX, pokeY, pokeWidth, pokeHeight)
     ctx.drawImage(obstacle, obstX, obstY, 70, 70)
-
+    gyms()
 }
 
 
@@ -99,9 +107,8 @@ function commands() {
     if (isArrowUp && pokeY > 220) {
 
         pokeY -= 150
-        if (pokeY < 220) {
+        if (pokeY < 230) {
             isArrowUp = false
-            player = pokemon2
         }
 
     } else if (isArrowUp == false) {
@@ -125,6 +132,11 @@ function collision() {
     if ((obstX < pokeX + pokeWidth && obstX > pokeX) && ((pokeY > obstY && pokeY < obstY + 70) || (pokeY + (pokeHeight / 2) > obstY && pokeY + (pokeHeight / 2) < obstY + 70)
         || (pokeY + pokeHeight > obstY && pokeY + pokeHeight < obstY + 70))) {
         gameOver = true
+        ctx.clearRect(0, 0,canvas.width,canvas.height)
+        audio.pause()
+        gameoverMusic.load()
+        gameoverMusic.volume=0.05
+        gameoverMusic.play()
     }
 
 }

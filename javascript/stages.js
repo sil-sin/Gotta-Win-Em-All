@@ -84,7 +84,7 @@ function gyms() {
         obstX -= 1
         obstUp = sludge
         obstDown = mudwall
-        audio.play()
+        audio.volume = 0.05
     }
     if (score > 1000) {
         bg = gym6

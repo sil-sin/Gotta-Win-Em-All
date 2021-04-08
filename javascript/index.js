@@ -1,15 +1,6 @@
 let canvas = document.querySelector('canvas');
 let ctx = canvas.getContext('2d')
 canvas.style.border = '2px solid black';
-// game elements
-let intervalId = 0
-let fgX = 0, fg1X = 700, fgWidth = 700
-let obstX = 1000, obstY = 200;
-let pokeX = 50, pokeY = 230, pokeHeight = 150, pokeWidth = 100;
-let isArrowUp = false, isArrowDown = false;
-let currentScore = document.querySelector('#current span')
-let score = 0
-let gameOver = false, win = false
 // menu element
 let startBtn = document.getElementById('startBtn')
 let restartBtn = document.querySelector('.restartBtn')
@@ -32,13 +23,12 @@ let audio = new Audio('../images/Jason Paige - Pokémon Theme Song (minus).mp3')
 let music = document.querySelector('#music span')
 let musicBox = document.getElementById('music')
 let winMusic = new Audio("../images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3'")
-let startMusic = new Audio('https://soundcloud.com/mosky-2000/sm64-custom-music-pewter-city-theme-pokemon-firered-leafgreen')
-let gameoverMusic = new Audio('')
+// let startMusic = new Audio('https://soundcloud.com/mosky-2000/sm64-custom-music-pewter-city-theme-pokemon-firered-leafgreen')
+let gameoverMusic = new Audio('/images/Ugly Flute and Kazoo Home Alone Theme - TikTok Audio (320 kbps).mp3')
 // .............................................
 
 // animation
 function animate() {
-
     draw()
     commands()
     collision()
@@ -74,7 +64,9 @@ function animate() {
     if (gameOver == true) {
         canvas.style.display = 'none';
         gameOverScr.style.display = 'flex';
+        cancelAnimationFrame(intervalId)
         intervalId = 0
+
     } else {
         intervalId = requestAnimationFrame(animate)
     };
@@ -101,10 +93,8 @@ function start() {
     let id2 = setInterval(() => {
         player = pokemon2
     }, 402)
-    startMusic.play()
-    // audio.pause()
     animate()
-    
+
 }
 // restart button
 function restart() {
@@ -131,7 +121,7 @@ function restart() {
     gameoverMusic.pause()
     winMusic.pause()
     startMusic.pause()
-    
+
 }
 
 window.addEventListener('load', () => {
@@ -155,6 +145,7 @@ window.addEventListener('load', () => {
         } else if (music.innerHTML == "Off") {
             audio.volume = 0.05
             audio.play()
+            audio.loop() = true
             music.innerHTML = "On"
             music.style.color = 'green'
         }
