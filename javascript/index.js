@@ -28,6 +28,19 @@ let gameoverMusic = new Audio('/images/Ugly Flute and Kazoo Home Alone Theme - T
 
 // animation
 function animate() {
+    let pause = false
+    let play =false
+    // document.addEventListener('keydown', (event) => {
+
+    //     if (event.code == 'ArrowDown') {
+    //         isArrowDown = true
+    //         isArrowUp = false
+    //     }
+    //     else if (event.code == 'ArrowUp') {
+    //         isArrowDown = false
+    //         isArrowUp = true
+    //     }
+    
     draw()
     commands()
     collision()
@@ -171,5 +184,5 @@ window.addEventListener('load', () => {
 
 
     })
-
+    
 })

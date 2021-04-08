@@ -52,7 +52,22 @@ canvas {
 #pokeballs img {
   width: 150px;
   height: 140px;
+  
 }
+
+#firstBall {
+  border: 10px solid rgba(255, 68, 0, 0);
+  border-radius: 80px ;
+}
+#secondBall{
+  border: 10px solid rgba(0, 128, 0, 0);
+  border-radius: 80px ;
+}
+#thirdBall{
+  border: 10px solid rgba(0, 0, 255, 0);
+  border-radius: 80px ;
+}
+
 #startBtn,
 .restartBtn {
   background-color: transparent;

@@ -1,7 +1,10 @@
 
 
 function pokeball() {
-
+    first.addEventListener('mouseover', () => {
+        first.style.borderColor = 'orangered';
+    })
+    first.addEventListener('mouseout', () => { first.style.borderColor = 'rgba(255, 68, 0, 0)'; })
     first.addEventListener('click', () => {
         Charmander.style.display = 'inline'
         first.style.display = 'none'
@@ -23,7 +26,12 @@ function pokeball() {
         })
     })
 
-
+    second.addEventListener('mouseover', () => {
+        second.style.borderColor = 'green';
+    })
+    second.addEventListener('mouseout', () => {
+        second.style.borderColor = 'rgba(255, 68, 0, 0)';
+    })
     second.addEventListener('click', () => {
         Bulbasaur.style.display = 'inline'
         second.style.display = 'none'
@@ -46,7 +54,12 @@ function pokeball() {
         })
     })
 
-
+    third.addEventListener('mouseover', () => {
+        third.style.borderColor = 'blue';
+    })
+    third.addEventListener('mouseout', () => {
+        third.style.borderColor = "rgba(255, 68, 0, 0)";
+    })
     third.addEventListener('click', () => {
         Squirtle.style.display = 'inline'
         third.style.display = 'none'
