@@ -36,7 +36,7 @@ function animate() {
 
 
     draw()
-    commands()
+   
     collision()
     //obstacle animation
     let num = 0
@@ -142,6 +142,7 @@ function restart() {
 
 window.addEventListener('load', () => {
     badges()
+   
     // draw()
     // commands()
     winMusic.pause()

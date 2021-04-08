@@ -59,7 +59,7 @@ let player = pokemon
 
 // drawings
 function draw() {
-
+    commands()
     if (starter == "Charmander") {
         pokemon = charmander
         pokemon1 = charmander1
@@ -88,7 +88,6 @@ function draw() {
 //commands 
 function commands() {
     document.addEventListener('keydown', (event) => {
-        console.log(event)
         if (event.code == 'ArrowDown') {
             isArrowDown = true
             isArrowUp = false
@@ -98,20 +97,19 @@ function commands() {
             isArrowUp = true
         }
     })
-  
+
     document.addEventListener('keyup', () => {
         isArrowDown = false
         isArrowUp = false
-     
+
     })
+    if (pokeY <= 229) {
+        isArrowUp = false
+    }
 
     if (isArrowUp && pokeY > 220) {
 
         pokeY -= 150
-        if (pokeY < 230) {
-            isArrowUp = false
-        }
-
     } else if (isArrowUp == false) {
         pokeY += 3
         if (pokeY > 230) {
@@ -132,12 +130,12 @@ function commands() {
 function collision() {
     if ((obstX < pokeX + pokeWidth && obstX > pokeX) && ((pokeY > obstY && pokeY < obstY + 70) || (pokeY + (pokeHeight / 2) > obstY && pokeY + (pokeHeight / 2) < obstY + 70)
         || (pokeY + pokeHeight > obstY && pokeY + pokeHeight < obstY + 70))) {
-        gameOver = true
+        gameOver = false
         badges()
         audio.pause()
-        gameoverMusic.load()
-        gameoverMusic.volume = 0.05
-        gameoverMusic.play()
+        // gameoverMusic.load()
+        // gameoverMusic.volume = 0.05
+        // gameoverMusic.play()
     }
 
 }
