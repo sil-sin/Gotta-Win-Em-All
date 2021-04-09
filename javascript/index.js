@@ -57,13 +57,13 @@ function animate() {
         currentScore.innerHTML = score
     };
     // foreground animation 
-    fg1X -= 2
-    fgX -= 2
+    fg1X -= 8
+    fgX -= 8
     if (fgX + foreground.width < 0) {
-        fgX = canvas.width - 2
+        fgX = canvas.width - 30
     };
     if (fg1X + foreground1.width < 0) {
-        fg1X = canvas.width - 2
+        fg1X = canvas.width - 30
     };
 
     // game over 
@@ -98,7 +98,7 @@ function start() {
     let counter = 0
     let id = setInterval(() => {
         player = pokemon
-    }, 210)
+    }, 211)
     let id1 = setInterval(() => {
         player = pokemon1
     }, 305)
@@ -130,6 +130,7 @@ function restart() {
     winScr.style.display = "none"
     win = false
     egg.style.display = 'inline'
+    pikaHead.style.display= "none"
     bg = gym1
     gameoverMusic.pause()
     winMusic.pause()

@@ -49,8 +49,6 @@ let rock = new Image()
 rock.src = 'https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/rock.png?raw=true'
 let rock1 = new Image()
 rock1.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/rock1.png?raw=true"
-// waterdrops
-//
 let obstUp = rock
 let obstDown = rock1
 let obstacle = obstUp

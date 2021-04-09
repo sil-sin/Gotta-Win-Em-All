@@ -100,8 +100,8 @@ function gyms() {
         obstX -= 0.5
         obstUp = marsh
         obstDown = rock
-        fg1X -= 1
-        fgX -= 1
+        fg1X -= 0.5
+        fgX -= 0.5
     }
     if (score > 360) {
         bg = gym7
@@ -109,8 +109,8 @@ function gyms() {
         obstX -= 0.5
         obstUp = fireball
         obstDown = fire
-        fg1X -= 1
-        fgX -= 1
+        fg1X -= 0.5
+        fgX -= 0.5
     }
     if (score > 420) {
         bg = gym8
@@ -118,8 +118,8 @@ function gyms() {
         obstX -= 0.5
         obstUp = rock
         obstDown = rock1
-        fg1X -= 1
-        fgX -= 1
+        fg1X -= 0.5
+        fgX -= 0.5
     }
     if (score >= 480) {
         bg = plateau
@@ -127,8 +127,8 @@ function gyms() {
         obstX -= 1
         obstUp = rock
         obstDown = rock1
-        fg1X -= 1
-        fgX -= 1
+        fg1X -= 0.5
+        fgX -= 0.5
     }
     if (score >= 540) {
         winScr.style.display = 'flex'
