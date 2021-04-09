@@ -130,8 +130,10 @@ function restart() {
     winScr.style.display = "none"
     win = false
     egg.style.display = 'inline'
-    pikaHead.style.display= "none"
+    pikaHead.style.display = "none"
     bg = gym1
+    obstDown = rock1
+    obstUp = rock
     gameoverMusic.pause()
     winMusic.pause()
     if (music.innerHTML == 'On') {

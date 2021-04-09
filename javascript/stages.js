@@ -66,7 +66,7 @@ function gyms() {
         obstUp = cascade
         obstDown = water
     }
-    if (score >= 120) {
+    if (score > 120) {
         bg = gym3
         cascade.style.display = 'inline'
         obstX -= 1
