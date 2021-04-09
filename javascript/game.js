@@ -17,11 +17,11 @@ let gameOver = false, win = false
 // character
 // pikachu
 let pikachu = new Image()
-pikachu.src = 'https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/pika0.gif?raw=true'
+pikachu.src = '../images/pika0.gif'
 let pikachu1 = new Image()
-pikachu1.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/pika1.gif?raw=true"
+pikachu1.src = "../images/pika1.gif"
 let pikachu2 = new Image()
-pikachu2.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/pika2.gif?raw=true"
+pikachu2.src = "../images/pika2.gif"
 // charmander 
 let charmander = new Image()
 charmander.src = "../images/char0.gif"
@@ -46,9 +46,9 @@ squirtle2.src = "../images/squi2.png"
 // obstacles
 // rocks
 let rock = new Image()
-rock.src = 'https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/rock.png?raw=true'
+rock.src = '../images/rock.png'
 let rock1 = new Image()
-rock1.src = "https://github.com/sil-sin/Gotta-Win-Em-All-provisory-/blob/main/images/rock1.png?raw=true"
+rock1.src = "../images/rock1.png"
 let obstUp = rock
 let obstDown = rock1
 let obstacle = obstUp

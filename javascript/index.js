@@ -23,7 +23,7 @@ let audio = new Audio('../images/Jason Paige - Pokémon Theme Song (minus).mp3')
 let music = document.querySelector('#music span')
 let musicBox = document.getElementById('music')
 let winMusic = new Audio("../images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3")
-let gameoverMusic = new Audio('/images/Ugly Flute and Kazoo Home Alone Theme - TikTok Audio (320 kbps).mp3')
+let gameoverMusic = new Audio('../images/Ugly Flute and Kazoo Home Alone Theme - TikTok Audio (320 kbps).mp3')
 // .............................................
 let pause = false
 
@@ -32,12 +32,9 @@ let pause = false
 
 // animation
 function animate() {
-
-
-
     draw()
-
     collision()
+    
     //obstacle animation
     let num = 0
     obstX -= 8
@@ -130,10 +127,8 @@ function restart() {
     winScr.style.display = "none"
     win = false
     egg.style.display = 'inline'
-    pikaHead.style.display = "none"
+    pikaHead.style.display= "none"
     bg = gym1
-    obstDown = rock1
-    obstUp = rock
     gameoverMusic.pause()
     winMusic.pause()
     if (music.innerHTML == 'On') {
