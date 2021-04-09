@@ -3,7 +3,7 @@
 let bg = gym1;
 // foreground
 let fg = new Image()
-fg.src = "../images/foreground.png"
+fg.src = "images/foreground.png"
 let foreground = fg, foreground1 = fg
 // game elements
 let intervalId = 0
@@ -17,38 +17,38 @@ let gameOver = false, win = false
 // character
 // pikachu
 let pikachu = new Image()
-pikachu.src = '../images/pika0.gif'
+pikachu.src = 'images/pika0.gif'
 let pikachu1 = new Image()
-pikachu1.src = "../images/pika1.gif"
+pikachu1.src = "images/pika1.gif"
 let pikachu2 = new Image()
-pikachu2.src = "../images/pika2.gif"
+pikachu2.src = "images/pika2.gif"
 // charmander 
 let charmander = new Image()
-charmander.src = "../images/char0.gif"
+charmander.src = "images/char0.gif"
 let charmander1 = new Image()
-charmander1.src = "../images/char1.gif"
+charmander1.src = "images/char1.gif"
 let charmander2 = new Image()
-charmander2.src = "../images/char2.gif"
+charmander2.src = "images/char2.gif"
 // bulbasaur
 let bulbasaur = new Image()
-bulbasaur.src = "../images/bulba0.gif"
+bulbasaur.src = "images/bulba0.gif"
 let bulbasaur2 = new Image()
-bulbasaur2.src = "../images/bulba1.png"
+bulbasaur2.src = "images/bulba1.png"
 let bulbasaur1 = new Image()
-bulbasaur1.src = "../images/bulba2.png"
+bulbasaur1.src = "images/bulba2.png"
 // squirtle
 let squirtle = new Image()
-squirtle.src = "../images/squi0.png"
+squirtle.src = "images/squi0.png"
 let squirtle1 = new Image()
-squirtle1.src = "../images/squi1.png"
+squirtle1.src = "images/squi1.png"
 let squirtle2 = new Image()
-squirtle2.src = "../images/squi2.png"
+squirtle2.src = "images/squi2.png"
 // obstacles
 // rocks
 let rock = new Image()
-rock.src = '../images/rock.png'
+rock.src = 'images/rock.png'
 let rock1 = new Image()
-rock1.src = "../images/rock1.png"
+rock1.src = "images/rock1.png"
 let obstUp = rock
 let obstDown = rock1
 let obstacle = obstUp

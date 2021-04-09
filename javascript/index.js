@@ -19,11 +19,11 @@ let egg = document.getElementById('egg')
 let pokename = document.querySelector('#confirm span')
 let confirm = document.getElementById('confirm')
 // music 
-let audio = new Audio('../images/Jason Paige - Pokémon Theme Song (minus).mp3')
+let audio = new Audio('images/Jason Paige - Pokémon Theme Song (minus).mp3')
 let music = document.querySelector('#music span')
 let musicBox = document.getElementById('music')
-let winMusic = new Audio("../images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3")
-let gameoverMusic = new Audio('../images/Ugly Flute and Kazoo Home Alone Theme - TikTok Audio (320 kbps).mp3')
+let winMusic = new Audio("images/05. Pokémon Gym - Evolution (Pokémon Red - Pokemon Blue).mp3")
+let gameoverMusic = new Audio('images/Ugly Flute and Kazoo Home Alone Theme - TikTok Audio (320 kbps).mp3')
 // .............................................
 let pause = false
 
