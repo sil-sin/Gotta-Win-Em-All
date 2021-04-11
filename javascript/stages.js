@@ -56,81 +56,91 @@ function badges() {
     earth.style.display = 'none'
 }
 function gyms() {
-    if (score >= 60) {
+    if (score >= 100) {
+        obstX -= 1.5
+        fg1X -= 1
+        fgX -= 1
+    }
+    if (score >= 300) {
         bg = gym2
         boulder.style.display = 'inline'
-        obstX -= 1
+        obstX -= 1.5
         fg1X -= 1
         fgX -= 1
 
         obstUp = cascade
         obstDown = water
     }
-    if (score > 120) {
+    if (score >= 600) {
         bg = gym3
         cascade.style.display = 'inline'
-        obstX -= 1
+        obstX -= 1.5
         obstUp = thunderbolt
         obstDown = electric
         fg1X -= 1
         fgX -= 1
     }
-    if (score > 180) {
+    if (score >= 900) {
         bg = gym4
         thunder.style.display = 'inline'
-        obstX -= 1
+        obstX -= 1.5
         obstUp = leaf
         obstDown = tree
         fg1X -= 1
         fgX -= 1
     }
-    if (score > 240) {
+    if (score >= 1200) {
         bg = gym5
         rainbow.style.display = 'inline'
-        obstX -= 1
+        obstX -= 1.25
         obstUp = sludge
         obstDown = mudwall
         audio.volume = 0.05
         fg1X -= 1
         fgX -= 1
     }
-    if (score > 300) {
+    if (score >= 1500) {
         bg = gym6
         soul.style.display = 'inline'
-        obstX -= 0.5
+        obstX -= 1.25
         obstUp = marsh
         obstDown = rock
         fg1X -= 0.5
         fgX -= 0.5
     }
-    if (score > 360) {
+    if (score >= 1800) {
         bg = gym7
         marsh.style.display = 'inline'
-        obstX -= 0.5
+        obstX -= 1.25
         obstUp = fireball
         obstDown = fire
         fg1X -= 0.5
         fgX -= 0.5
     }
-    if (score > 420) {
+    if (score >= 2100) {
         bg = gym8
         volcano.style.display = 'inline'
-        obstX -= 0.5
+        obstX -= 1.25
         obstUp = rock
         obstDown = rock1
         fg1X -= 0.5
-        fgX -= 0.5
+        fgX -= 0.5;
+        if (obstX < 10 && obstX >= -3) {
+            score += 10
+            currentScore.innerHTML = score
+        };
     }
-    if (score >= 480) {
+    if (score >= 2400) {
         bg = plateau
         earth.style.display = 'inline'
-        obstX -= 1
+        obstX -= 1.25
         obstUp = rock
         obstDown = rock1
         fg1X -= 0.5
         fgX -= 0.5
+
     }
-    if (score >= 540) {
+    if (score >= 3000) {
         winScr.style.display = 'flex'
         canvas.style.display = 'none'
         win = true
