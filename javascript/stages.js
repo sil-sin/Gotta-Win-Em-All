@@ -102,7 +102,7 @@ function gyms() {
     if (score >= 1500) {
         bg = gym6
         soul.style.display = 'inline'
-        obstX -= 1.25
+        obstX -= 1
         obstUp = marsh
         obstDown = rock
         fg1X -= 0.5
@@ -111,7 +111,7 @@ function gyms() {
     if (score >= 1800) {
         bg = gym7
         marsh.style.display = 'inline'
-        obstX -= 1.25
+        obstX -= 1
         obstUp = fireball
         obstDown = fire
         fg1X -= 0.5
@@ -120,7 +120,7 @@ function gyms() {
     if (score >= 2100) {
         bg = gym8
         volcano.style.display = 'inline'
-        obstX -= 1.25
+        obstX -= 1
         obstUp = rock
         obstDown = rock1
         fg1X -= 0.5
@@ -133,7 +133,7 @@ function gyms() {
     if (score >= 2400) {
         bg = plateau
         earth.style.display = 'inline'
-        obstX -= 1.25
+        obstX -= 1
         obstUp = rock
         obstDown = rock1
         fg1X -= 0.5
