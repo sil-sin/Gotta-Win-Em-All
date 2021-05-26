@@ -1,5 +1,5 @@
 # Gotta Win Em All!
-
+[Link Deploy](https://sil-sin.github.io/Gotta-Win-Em-All/)
 ## Description
 
 Gotta Win Em All! is a Pokemon-themed game, side scroller type, where the player has to make the character jump or duck over/under the obstacles that will be coming at it. If the character collides with the obstacle then is Game Over.
@@ -96,9 +96,8 @@ Definition of the different states and their transition (transition functions)
 
 URLs for the project repo and deploy
 [Link Repo](https://github.com/sil-sin/Gotta-Win-Em-All.git)
-[Link Deploy](https://sil-sin.github.io/Gotta-Win-Em-All-provisory-/)
 
 ### Slides
 
 URLs for the project presentation (slides)
-[Link Slides.com](https://docs.google.com)
+[Link Slides.com](https://docs.google.com/presentation/d/1UMXK_-7uNjNw8bFM5fcGzSlvJT1bOrt_f91n_2pFeUY/edit?usp=sharing)
